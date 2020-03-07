@@ -10,8 +10,8 @@ import { Usuario } from '../models/user';
 })
 export class CardsComponent implements OnInit {
 
-  
-  user : Usuario[];
+  teste:any = [];
+  user : Usuario;
   inputNomePlayer: string;
 
   constructor(private cardservice : CardServiceService) { }
@@ -22,8 +22,10 @@ export class CardsComponent implements OnInit {
 
   chamarApi(){
     this.cardservice.reqapi().subscribe((dados) => {
-      this.user = dados;
-      console.log(this.user)
+      this.teste = dados;
+      console.log(this.teste.login);
+      console.log(dados);
+     
     });
   }
   
