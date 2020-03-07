@@ -8,7 +8,7 @@ import { Usuario } from './models/user';
 export class CardServiceService {
   usuarioGit: string;
   user : Usuario;
-  username:string ='PauloRenato98';
+  username:string ='Gabriel1Aguiar';
 
   APIGIT = `https://api.github.com/users/${this.username}`
 
@@ -18,11 +18,12 @@ export class CardServiceService {
 
 
 reqapi(){
-    return this.http.get<Usuario[]>(this.APIGIT);
+    return this.http.get<Usuario>(this.APIGIT);
     console.log(this.usuarioGit);
   
   //#29lqcpyv0 clashofclans
 }
+
 
 getNome(valor){
   this.usuarioGit = valor;
