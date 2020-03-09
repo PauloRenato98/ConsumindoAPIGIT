@@ -10,7 +10,7 @@ export class CardServiceService {
   user : Usuario;
   username:string ='Gabriel1Aguiar';
 
-  APIGIT = `https://api.github.com/users/${this.username}`
+  APIGIT = `https://api.github.com/users/${this.usuarioGit}`
 
   constructor(private http: HttpClient) { }
 
@@ -20,7 +20,7 @@ export class CardServiceService {
 reqapi(){
     return this.http.get<Usuario>(this.APIGIT);
     console.log(this.usuarioGit);
-  
+
   //#29lqcpyv0 clashofclans
 }
 
@@ -28,7 +28,8 @@ reqapi(){
 getNome(valor){
   this.usuarioGit = valor;
   console.log('estou no service ---------*---------');
- 
+  this.APIGIT = `https://api.github.com/users/${this.usuarioGit}`
+
   }
 
 }

@@ -17,19 +17,18 @@ export class CardsComponent implements OnInit {
   constructor(private cardservice : CardServiceService) { }
 
   ngOnInit() {
-  
+
   }
 
   chamarApi(){
     this.cardservice.reqapi().subscribe((dados) => {
-      this.teste = dados;
-      console.log(this.teste.login);
+      this.user= dados;
       console.log(dados);
-     
+
     });
   }
-  
-  
+
+
   inputUser(usuarioGit){
     this.cardservice.getNome(usuarioGit);
   }
@@ -37,6 +36,6 @@ export class CardsComponent implements OnInit {
  /* inputPlayer(e){
     const pegarvalor = e;
     this.inputNomePlayer = pegarvalor;
-    
+
   }*/
 }
