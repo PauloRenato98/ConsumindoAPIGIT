@@ -11,6 +11,7 @@ import { Usuario } from '../models/user';
 export class CardsComponent implements OnInit {
 
   teste:any = [];
+  getrepositorios: any = [];
   user : Usuario;
   inputNomePlayer: string;
 
@@ -24,6 +25,7 @@ export class CardsComponent implements OnInit {
     this.cardservice.reqapi().subscribe((dados) => {
       this.user= dados;
       console.log(dados);
+      console.log(this.user.avatar_url);
 
     });
   }
@@ -31,6 +33,14 @@ export class CardsComponent implements OnInit {
 
   inputUser(usuarioGit){
     this.cardservice.getNome(usuarioGit);
+  }
+
+
+  chamarApiRepo(){
+    this.cardservice.reqapirepo().subscribe((dadosretorno) => {
+      this.getrepositorios = dadosretorno;
+      console.log(dadosretorno);
+    })
   }
 
  /* inputPlayer(e){
