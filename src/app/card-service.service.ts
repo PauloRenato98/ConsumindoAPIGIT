@@ -8,12 +8,9 @@ import { Usuario } from './models/user';
 export class CardServiceService {
   usuarioGit: string;
   user : Usuario;
-  gitRepo: string = 'https://api.github.com/users/PauloRenato98/repos';
-
 
   APIGIT = `https://api.github.com/users/${this.usuarioGit}`
-  "https://api.github.com/users/PauloRenato98/repos"
-  APITGITREPO = `https://api.github.com/users/${this.usuarioGit}/${this.gitRepo}`
+  APITGITREPO = `https://api.github.com/users/PauloRenato98/repos`;
 
   constructor(private http: HttpClient) { }
 
@@ -29,14 +26,13 @@ reqapi(){
 
 reqapirepo(){
   return this.http.get(this.APITGITREPO);
+  console.log(this.APITGITREPO);
 
 }
 
 getNome(valor){
   this.usuarioGit = valor;
-  console.log('estou no service ---------*---------');
   this.APIGIT = `https://api.github.com/users/${this.usuarioGit}`
-
   }
 
 }

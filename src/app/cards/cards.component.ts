@@ -10,7 +10,6 @@ import { Usuario } from '../models/user';
 })
 export class CardsComponent implements OnInit {
 
-  teste:any = [];
   getrepositorios: any = [];
   user : Usuario;
   inputNomePlayer: string;
@@ -26,8 +25,10 @@ export class CardsComponent implements OnInit {
       this.user= dados;
       console.log(dados);
       console.log(this.user.avatar_url);
-
     });
+    this.chamarApiRepo();
+
+
   }
 
 
@@ -39,7 +40,7 @@ export class CardsComponent implements OnInit {
   chamarApiRepo(){
     this.cardservice.reqapirepo().subscribe((dadosretorno) => {
       this.getrepositorios = dadosretorno;
-      console.log(dadosretorno);
+      console.log(this.getrepositorios);
     })
   }
 
