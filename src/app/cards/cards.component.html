@@ -20,7 +20,7 @@
   <div class="row row-cols-1 row-cols-md-3">
         <div class="card h-100">
             <img [src]="user.avatar_url">
-              <div class="card-body">
+              <div class="card-body" style="text-align: center;">
                   <h5 class="card-title">{{user.login}}</h5>
                   <p class="card-text">{{ user.bio }}</p>
                   <div class="card-body">
@@ -30,12 +30,10 @@
         </div>
 
   </div>
-
         <div>
             <input class="input-group-prepend" type="text" (change)="inputUser($event.target.value)">
               <br>
             <button class="btn btn-primary" (click)="chamarApi()"> PEGAR DADOS</button>
-            <button class="btn btn-secondary" (click)="chamarApiRepo()"> PEGAR REPOSITORIO </button>
         </div>
 </div>
 

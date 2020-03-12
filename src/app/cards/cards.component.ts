@@ -23,12 +23,8 @@ export class CardsComponent implements OnInit {
   chamarApi(){
     this.cardservice.reqapi().subscribe((dados) => {
       this.user= dados;
-      console.log(dados);
-      console.log(this.user.avatar_url);
     });
     this.chamarApiRepo();
-
-
   }
 
 
