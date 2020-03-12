@@ -14,6 +14,12 @@
 <input type="text" id="inputDadosPlayer" name="inputDadosPlayer" (input)="this.inputPlayer=$event.target.value">
   {{teste.repos_url}}
 -->
+<style>
+
+.container {
+  justify-content:  center;
+}
+</style>
 
 
 <div class="card-body" style="margin-left: 34%;">
@@ -36,7 +42,6 @@
             <button class="btn btn-primary" (click)="chamarApi()"> PEGAR DADOS</button>
         </div>
 </div>
-
 
   <div class="container" *ngFor="let item of getrepositorios">
     <div style="text-align: center;">
