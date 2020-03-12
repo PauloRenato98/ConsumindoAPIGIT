@@ -10,7 +10,7 @@ export class CardServiceService {
   user : Usuario;
 
   APIGIT = `https://api.github.com/users/${this.usuarioGit}`
-  APITGITREPO = `https://api.github.com/users/paulorenato98/repos`;
+  APITGITREPO = `https://api.github.com/users/${this.usuarioGit}/repos`;
 
   constructor(private http: HttpClient) { }
 
@@ -33,6 +33,7 @@ reqapirepo(){
 getNome(valor){
   this.usuarioGit = valor;
   this.APIGIT = `https://api.github.com/users/${this.usuarioGit}`
+  this.APITGITREPO = `https://api.github.com/users/${this.usuarioGit}/repos`;
   }
 
 }
