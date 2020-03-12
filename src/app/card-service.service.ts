@@ -10,7 +10,7 @@ export class CardServiceService {
   user : Usuario;
 
   APIGIT = `https://api.github.com/users/${this.usuarioGit}`
-  APITGITREPO = `https://api.github.com/users/PauloRenato98/repos`;
+  APITGITREPO = `https://api.github.com/users/eduardollanda/repos`;
 
   constructor(private http: HttpClient) { }
 
