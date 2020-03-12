@@ -27,7 +27,6 @@ export class CardsComponent implements OnInit {
     this.chamarApiRepo();
   }
 
-
   inputUser(usuarioGit){
     this.cardservice.getNome(usuarioGit);
   }
