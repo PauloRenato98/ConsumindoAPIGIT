@@ -38,21 +38,21 @@
 </div>
 
 
-  <div class="container">
-    <div class="col-md-12 cold-md-offset-3">
-      <table class="table table-striped" *ngFor="let item of getrepositorios" >
+  <div class="container" *ngFor="let item of getrepositorios">
+    <div style="text-align: center;">
+      <table class="table">
         <thead>
           <tr>
             <th>id</th>
-            <th >name</th>
-            <th >private</th>
+            <th>name</th>
+            <th>private</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>{{ item.id }}</td>
-            <td>{{ item.name }}</td>
-            <td>{{ item.private }}</td>
+            <td width="400">{{ item.id }}</td>
+            <td width="400">{{ item.name }}</td>
+            <td width="400">{{ item.private }}</td>
           </tr>
         </tbody>
       </table>
